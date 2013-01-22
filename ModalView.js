@@ -10,8 +10,8 @@ define(['underscore', 'backbone', 'boostrap', 'ModalDelegate'], function(_, Back
             this.delegate.on('all', function() {
                 this.trigger.apply(this, arguments);
             }, this);
-            if (this.options.onhideRemove) {
-                this.on('hide', this.remove, this);
+            if (this.options.onhiddenRemove) {
+                this.on('hidden', this.remove, this);
             }
         },
         show: function() {
