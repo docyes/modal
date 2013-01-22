@@ -1,7 +1,16 @@
 define(['bootstrap', 'backbone'], function(undefined, Backbone) {
     return Backbone.View.extend({
         initialize: function() {
+            var show = false;
+            if (this.options.show) {
+                show = true;
+                delete this.options.show; 
+            }
             this.$el.modal(this.options);
+            if (show) {
+                this.show();
+            }
+            
         },
         events: {
             'show, shown, hide, hidden': function(e) {
