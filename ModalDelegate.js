@@ -3,8 +3,8 @@ define(['bootstrap', 'backbone'], function(undefined, Backbone) {
         initialize: function() {
             this.$el.modal(_.pluck(this.options, ['backdrop', 'keyboard', 'remote']));
             if (this.options.show) { //ensure full show event lifecycle
-                this.trigger('show');
                 this.$el.modal('show');
+                this.trigger('show');
             }
             
         },
