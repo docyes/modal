@@ -1,4 +1,4 @@
-define(['underscore', 'backbone', 'bootstrap', 'ModalDelegate'], function(_, Backbone, undefined, ModalDelegate) {
+define(['jquery', 'underscore', 'backbone', 'bootstrap', 'ModalDelegate'], function($, _, Backbone, undefined, ModalDelegate) {
     return Backbone.view.extend({
         className: modalDelegate.className,
         attributes: {
@@ -22,6 +22,9 @@ define(['underscore', 'backbone', 'bootstrap', 'ModalDelegate'], function(_, Bac
         },
         toggle: function() {
             this.delegate.toggle();
+        },
+        append: function(el) {
+            $('body').append(el);
         },
         template: ModalDelegate.template
     });
