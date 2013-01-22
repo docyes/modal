@@ -6,9 +6,6 @@ define(['bootstrap', 'backbone'], function(undefined, Backbone) {
         events: {
             'show, shown, hide, hidden': function(e) {
                 this.trigger(e.type);
-            },
-            '[data-dismiss="modal"]': function(e) {
-                this.hide();
             }
         },
         show: function() {
