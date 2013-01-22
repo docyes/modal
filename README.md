@@ -3,7 +3,7 @@ modal
 
 Backbone/Bootstrap Modal View
 
-<code>
+```js
 define(['ModalView'], function(ModalView) {
      return Modalview.extend({
         initialize: function() {
@@ -11,4 +11,4 @@ define(['ModalView'], function(ModalView) {
         }
      });
 });
-</code>
+```
