@@ -4,10 +4,8 @@ modal
 Backbone/Bootstrap Modal View
 
 General Architecture:
-
-1) Simple inheritable view class for modals (ModalView)
-
-2) Generic behavioral driver for bootstrap modal plugin (ModalDelegate)
+Simple inheritable view class for modals (ModalView)
+Generic behavioral driver for bootstrap modal plugin (ModalDelegate)
 
 ```js
 define('HelloWorldModal', ['ModalView'], function(ModalView) {
