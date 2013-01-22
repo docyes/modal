@@ -8,7 +8,6 @@ define(['bootstrap', 'backbone'], function(undefined, Backbone) {
                 this.$modal('show');
                 this.trigger('show');
             }
-            
         },
         events: {
             'show, shown, hide, hidden': function(e) { //proxy events to view
