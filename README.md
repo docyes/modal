@@ -4,11 +4,22 @@ modal
 Backbone/Bootstrap Modal View
 
 ```js
-define(['ModalView'], function(ModalView) {
+define('HelloWorldModal', ['ModalView'], function(ModalView) {
      return Modalview.extend({
         initialize: function() {
             ModalView.prototype.initialize.apply(this, arguments);
+        },
+        render: function() {
+            this.$el.html(this.template);
+            this.$('.modal-body').html('w00t!');
+            return this;
         }
      });
+});
+
+define(['HelloWorldModal'], function(HelloWorldModal) {
+     var helloWorldModal = new HelloWorldModal({onhiddenRemove: true});
+     helloWorldModal.append(helloWorldModal.render().el);
+     helloWorldModal.show();
 });
 ```
