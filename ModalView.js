@@ -1,6 +1,6 @@
 define(['underscore', 'backbone', 'boostrap', 'ModalDelegate'], function(_, Backbone, undefined, ModalDelegate) {
     return Backbone.view.extend({
-        className: 'modal',
+        className: modalDelegate.className,
         attributes: {
             style: 'display:none'
         },
@@ -22,6 +22,7 @@ define(['underscore', 'backbone', 'boostrap', 'ModalDelegate'], function(_, Back
         },
         toggle: function() {
             this.delegate.toggle();
-        }
+        },
+        template: ModalDelegate.template
     });
 });
