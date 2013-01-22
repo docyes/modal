@@ -1,7 +1,8 @@
 define(['bootstrap', 'backbone'], function(undefined, Backbone) {
     return Backbone.View.extend({
         initialize: function() {
-            this.$el.modal(_.pluck(this.options, ['backdrop', 'keyboard', 'remote']));
+            var modalOptions = _.extend({show: false}, _.pluck(this.options, ['backdrop', 'keyboard', 'remote']));
+            this.$el.modal(modalOptions);
             if (this.options.show) { //ensure full show event lifecycle
                 this.$el.modal('show');
                 this.trigger('show');
