@@ -2,9 +2,10 @@ define(['bootstrap', 'backbone'], function(undefined, Backbone) {
     return Backbone.View.extend({
         initialize: function() {
             var modalOptions = _.extend({show: false}, _.pluck(this.options, ['backdrop', 'keyboard', 'remote']));
-            this.$el.modal(modalOptions);
+            this.$modal = this.$el.modal;
+            this.$modal(modalOptions);
             if (this.options.show) { //ensure full show event lifecycle
-                this.$el.modal('show');
+                this.$modal('show');
                 this.trigger('show');
             }
             
@@ -15,13 +16,13 @@ define(['bootstrap', 'backbone'], function(undefined, Backbone) {
             }
         },
         show: function() {
-            this.$el.modal('show');
+            this.$modal('show');
         },
         hide: function() {
-            this.$el.modal('hide');
+            this.$modal('hide');
         },
         toggle: function() {
-            this.$el.modal('toggle');
+            this.$modal('toggle');
         }
     },
     {
