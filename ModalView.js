@@ -1,4 +1,4 @@
-define(['underscore', 'backbone', 'boostrap', 'ModalDelegate'], function(_, Backbone, undefined, ModalDelegate) {
+define(['underscore', 'backbone', 'bootstrap', 'ModalDelegate'], function(_, Backbone, undefined, ModalDelegate) {
     return Backbone.view.extend({
         className: modalDelegate.className,
         attributes: {
