@@ -7,13 +7,13 @@ define(['bootstrap', 'backbone'], function(undefined, Backbone) {
                 delete this.options.show; 
             }
             this.$el.modal(this.options);
-            if (show) {
+            if (show) { //ensure full show event lifecycle
                 this.show();
             }
             
         },
         events: {
-            'show, shown, hide, hidden': function(e) {
+            'show, shown, hide, hidden': function(e) { //proxy events to view
                 this.trigger(e.type);
             }
         },
